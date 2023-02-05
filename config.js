@@ -1,5 +1,6 @@
 // S C R I P T  O R I  B Y  Bochilgaming 🔭
 // Ditulis Ulang Oleh ImYanXiao
+// Di Recode Lagi Sama DemonGT
 // Credits, jangan dihapus atau diubah!
 
 // - - THANKS TO - -
@@ -11,6 +12,7 @@
 // • FahriAdison
 // • The.Sad.Boy01
 // • Rlxfly
+// • DemonGT
 // • Rasel comel
 // • ImYanXiao
 // • Xtreshe (Beban)
@@ -50,7 +52,7 @@ let wibh = moment.tz('Asia/Jakarta').format('HH')
 global.sig = 'https://instagram.com/demongt' //Link Instagrammu
 global.sgh = 'https://github.com/VicenziPrst' //Link Githubmu
 global.sgc = 'https://chat.whatsapp.com/DyBMXDw1IshFM9z0ZHZNlR'
-global.sdc = '-' //Isi Pake Link Discordmu Kalo Gada Biarin aja
+global.sdc = 'https://discord.gg/MQtpnynY' //Isi Pake Link Discordmu Kalo Gada Biarin aja
 global.snh = 'https://nhentai.net/g/HaramTod🗿' //Hmmm, Ini boleh kalian isi terserah :v
 
 /*============== PAYMENT ==============*/
@@ -357,25 +359,25 @@ global.dmenuf = '┗––––––––––✦' //footer
 
 // COMMAND MENU
 global.dashmenu = '𝘿𝘼𝙎𝙃𝘽𝙊𝘼𝙍𝘿'
-global.cmenut = '❏––––––『'                       //top
-global.cmenuh = '』––––––'                        //header
-global.cmenub = '┊❀'                            //body
-global.cmenuf = '┗━═┅═━––––––๑\n'                //footer
-global.cmenua = '\n⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚❙❘ ⌕\n     ' //after
-global.pmenus = '┊'                              //pembatas menu selector
+global.cmenut = '『'                       //top
+global.cmenuh = '』'                        //header
+global.cmenub = ''                            //body
+global.cmenuf = ''                //footer
+global.cmenua = '' //after
+global.pmenus = ''                              //pembatas menu selector
 
-global.htki = '––––––『' // Hiasan Titile (KIRI)
-global.htka = '』––––––' // Hiasan Title  (KANAN)
-global.lopr = 'Ⓟ' //LOGO PREMIUM ON MENU.JS
-global.lolm = 'Ⓛ' //LOGO LIMIT/FREE ON MENU.JS
-global.htjava = '⫹⫺'    //hiasan Doang :v
-global.hsquere = ['⛶','❏','⫹⫺']
+global.htki = '『' // Hiasan Titile (KIRI)
+global.htka = '』' // Hiasan Title  (KANAN)
+global.lopr = '🎟️' //LOGO PREMIUM ON MENU.JS
+global.lolm = '💦' //LOGO LIMIT/FREE ON MENU.JS
+global.htjava = ''    //hiasan Doang :v
+global.hsquere = ['','','']
 
 /*============== STICKER WM ==============*/
 global.stickpack = '.'
 global.stickauth = `☂︎\nD\ne\nm\no\nn\nG\nT\n-\n𝗕\n𝗢\n𝗧\n✦\n\n⫹⫺ Whatsapp BOT\nwa.me/${global.nomorbot}`
 global.packname = 'Subs YT : DemonGT'
-global.packname2 = 'DemomGT'
+global.packname2 = 'DemonGT'
 
 global.multiplier = 38 // The higher, The harder levelup
 
