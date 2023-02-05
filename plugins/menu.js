@@ -259,48 +259,48 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
    {
 	title: `${htki} Main ${htka}`,
 	rows: [
-	    {title: ` ${pmenus} Speed Bot`, rowId: ".ping",
-	    {title: ` ${pmenus} Runtime`, rowId: ".runtime", 
-	    {title: ` ${pmenus} Owner`, rowId: ".creator",
-	    {title: ` ${pmenus} Discord`, rowId: ".discord",
+	    {title: ` ${pmenus} Speed Bot`, rowId: ".ping"},
+	    {title: ` ${pmenus} Runtime`, rowId: ".runtime"}, 
+	    {title: ` ${pmenus} Owner`, rowId: ".creator"},
+	    {title: ` ${pmenus} Discord`, rowId: ".discord"},
 	]
     },{
 	title: `${htki} Support ${htka}`,
 	rows: [
-	    {title: ` ${pmenus} Donasi`, rowId: ".donasi",
+	    {title: ` ${pmenus} Donasi`, rowId: ".donasi"},
 	]
 	},{
 	title: `${htki} Menu ${htka}`,
 	rows: [
-	    {title: ` ${pmenus} All`, rowId: ".? all",
-	    {title: ` ${pmenus} Rpg`, rowId: ".? rpg",
-	{title: ` ${pmenus} Exp`, rowId: ".? xp",
-	{title: ` ${pmenus} Game`, rowId: ".? game",
-	{title: ` ${pmenus} Fun`, rowId: ".? fun",
-	{title: ` ${pmenus} Kerang`, rowId: ".? kerangajaib",
-	{title: ` ${pmenus} Quotes`, rowId: ".? quotes",
-	{title: ` ${pmenus} Anime`, rowId: ".? anime",
-	{title: ` ${pmenus} Nsfw`, rowId: ".? nsfw",
-	{title: ` ${pmenus} Premium`, rowId: ".? premium", description: "Untuk user premium"},
-	{title: ` ${pmenus} Anonymous Chats`, rowId: ".? anonymous", description: "Bicara dengan orang tidak dikenal"},
-	{title: ` ${pmenus} Al-Quran`, rowId: ".? quran", description: "Tobat yuk kak"},
-	{title: ` ${pmenus} Internet`, rowId: ".? internet", description: "Cari sesuatu diBOT"},
-	{title: ` ${pmenus} Downloaders`, rowId: ".? downloader", description: "Download sesuatu dari BOT"},
-	{title: ` ${pmenus} Stikers`, rowId: ".? stiker", description: "Buat Sticker diBOT"},
-	{title: ` ${pmenus} Nulis`, rowId: ".? nulis", description: "Nulis kok males kak?"},
-	{title: ` ${pmenus} Audio`, rowId: ".? audio", description: "Ubah Audio dengan Filter"},
-	{title: ` ${pmenus} Group`, rowId: ".? group", description: "Only Groups"},
-	{title: ` ${pmenus} Admin`, rowId: ".? admin", description: "Only Admin Group"},
-	{title: ` ${pmenus} Database`, rowId: ".? database", description: "Simpan sesuatu diBOT"},
-	{title: ` ${pmenus} Tools`, rowId: ".? tools", description: "Mungkin tools ini bisa membantu?"},
-	{title: ` ${pmenus} Info`, rowId: ".? info", description: "Info info BOT"},
-	{title: ` ${pmenus} Owner`, rowId: ".? owner", description: "Owner Only!"},
-	{title: ` ${pmenus} No Category`, rowId: ".? nocategory", description: "Fitur tanpa kategory!"},
+	    {title: ` ${pmenus} All`, rowId: ".? all"},
+	    {title: ` ${pmenus} Rpg`, rowId: ".? rpg"},
+	{title: ` ${pmenus} Exp`, rowId: ".? xp"},
+	{title: ` ${pmenus} Game`, rowId: ".? game"},
+	{title: ` ${pmenus} Fun`, rowId: ".? fun"},
+	{title: ` ${pmenus} Kerang`, rowId: ".? kerangajaib"},
+	{title: ` ${pmenus} Quotes`, rowId: ".? quotes"},
+	{title: ` ${pmenus} Anime`, rowId: ".? anime"},
+	{title: ` ${pmenus} Nsfw`, rowId: ".? nsfw"},
+	{title: ` ${pmenus} Premium`, rowId: ".? premium"},
+	{title: ` ${pmenus} Anonymous Chats`, rowId: ".? anonymous"},
+	{title: ` ${pmenus} Al-Quran`, rowId: ".? quran"},
+	{title: ` ${pmenus} Internet`, rowId: ".? internet"},
+	{title: ` ${pmenus} Downloaders`, rowId: ".? downloader"},
+	{title: ` ${pmenus} Stikers`, rowId: ".? stiker"},
+	{title: ` ${pmenus} Nulis`, rowId: ".? nulis"},
+	{title: ` ${pmenus} Audio`, rowId: ".? audio"},
+	{title: ` ${pmenus} Group`, rowId: ".? group"},
+	{title: ` ${pmenus} Admin`, rowId: ".? admin"},
+	{title: ` ${pmenus} Database`, rowId: ".? database"},
+	{title: ` ${pmenus} Tools`, rowId: ".? tools"},
+	{title: ` ${pmenus} Info`, rowId: ".? info"},
+	{title: ` ${pmenus} Owner`, rowId: ".? owner"},
+	{title: ` ${pmenus} No Category`, rowId: ".? nocategory"},
 	]
   },
 ]
 
-let tek = `✧────···[ Dashboard ]···────✧
+let tek = `[ Dashboard ]
 *${ucapan()} ${conn.getName(m.sender)}*
 ╭━━━━━━━━━━━━━━━━┈─✧
 ┴
