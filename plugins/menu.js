@@ -1,5 +1,6 @@
 // Script Ori By BochilGaming
 // Ditulis Ulang Oleh ImYanXiao
+// di Recode Sama DemonGT
 
 import { promises } from 'fs'
 import { join } from 'path'
@@ -12,49 +13,47 @@ const { generateWAMessageFromContent, proto, getMessage, generateWAMessageConten
 
 const defaultMenu = {
   before: `
-╭─────═[ INFO USER ]═─────⋆
-│╭───────────────···
-┴│☂︎ *Name:* %name
-⬡│☂︎ *Tag:* %tag
-⬡│☂︎ *Premium:* %prems
-⬡│☂︎ *Limit:* %limit
-⬡│☂︎ *Money:* %money
-⬡│☂︎ *Role:* %role
-⬡│☂︎ *Level:* %level [ %xp4levelup Xp For Levelup]
-⬡│☂︎ *Xp:* %exp / %maxexp
-┬│☂︎ *Total Xp:* %totalexp
-│╰────────────────···
-┠─────═[ TODAY ]═─────⋆
-│╭────────────────···
-┴│    *${ucapan()} %name!*
-⬡│☂︎ *Tanggal:* %week %weton
-⬡│☂︎ *Date:* %date
-⬡│☂︎ *Tanggal Islam:* %dateIslamic
-┬│☂︎ *Waktu:* %time
-│╰────────────────···
-┠─────═[ INFO BOT ]═─────⋆
-│╭────────────────···
-┴│☂︎ *Nama Bot:* %me
-⬡│☂︎ *Mode:* %mode
-⬡│☂︎ *Prefix:* [ *%_p* ]
-⬡│☂︎ *Baileys:* Multi Device
-⬡│☂︎ *Battery:* ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
-⬡│☂︎ *Platform:* %platform
-⬡│☂︎ *Type:* Node.Js
-⬡│☂︎ *Uptime:* %muptime
-┬│☂︎ *Database:* %rtotalreg dari %totalreg
-│╰────────────────···
-╰──────────═┅═──────────
+[ INFO USER ]
 
-⃝▣──「 *INFO CMD* 」───⬣
-│ *Ⓟ* = Premium
-│ *Ⓛ* = Limit
-▣────────────⬣
+*Name:* %name
+*Tag:* %tag
+*Premium:* %prems
+*Limit:* %limit
+*Money:* %money
+*Role:* %role
+*Level:* %level [ %xp4levelup Xp For Levelup]
+*Xp:* %exp / %maxexp
+*Total Xp:* %totalexp
+
+[ TODAY ]
+
+*${ucapan()} %name!*
+*Tanggal:* %week %weton
+*Date:* %date
+*Tanggal Islam:* %dateIslamic
+*Waktu:* %time
+
+[ INFO BOT ]
+
+*Nama Bot:* %me
+*Mode:* %mode
+*Prefix:* [ *%_p* ]
+*Baileys:* Multi Device
+*Battery:* ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
+*Platform:* %platform
+*Type:* Node.Js
+*Uptime:* %muptime
+*Database:* %rtotalreg dari %totalreg
+
+[ INFO CMD ]
+*🎟️* = Premium
+*💦* = Limit
+
 %readmore
 `.trimStart(),
-  header: '⃝▣──「 %category 」───⬣',
-  body: '│○ %cmd %isPremium %islimit',
-  footer: '▣───────────⬣\n',
+  header: [ %category ]',
+  body: ' %cmd %isPremium %islimit',
+  footer: '',
   after: `%c4 %me`,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
@@ -258,45 +257,45 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
    
    const sections = [
    {
-	title: `${htki} ᴍᴀɪɴ ${htka}`,
+	title: `${htki} Main ${htka}`,
 	rows: [
-	    {title: `⚡ ${pmenus} 𝚂𝙿𝙴𝙴𝙳 𝙱𝙾𝚃`, rowId: ".ping", description: "𝙼𝚎𝚗𝚊𝚖𝚙𝚒𝚕𝚔𝚊𝚗 𝙺𝚎𝚌𝚎𝚙𝚊𝚝𝚊𝚗 𝚁𝚎𝚜𝚙𝚘𝚗 𝙱𝙾𝚃"},
-	    {title: `⏰ ${pmenus} 𝚁𝚄𝙽𝚃𝙸𝙼𝙴 𝙱𝙾𝚃`, rowId: ".runtime", description: "𝙼𝚎𝚗𝚊𝚖𝚙𝚒𝚕𝚔𝚊𝚗 𝚆𝚊𝚔𝚝𝚞 𝙱𝙾𝚃 𝙱𝚎𝚛𝚓𝚊𝚕𝚊𝚗"}, 
-	    {title: `💌 ${pmenus} 𝙾𝚆𝙽𝙴𝚁 𝙱𝙾𝚃`, rowId: ".creator", description: "𝙼𝚎𝚗𝚊𝚖𝚙𝚒𝚕𝚔𝚊𝚗 𝙸𝚗𝚏𝚘𝚛𝚖𝚊𝚜𝚒 𝚃𝚎𝚗𝚝𝚊𝚗𝚐 𝙾𝚠𝚗𝚎𝚛"},
-	    {title: `📔 ${pmenus} 𝚂𝙲𝚁𝙸𝙿𝚃 𝙱𝙾𝚃`, rowId: ".sc", description: `𝚂𝚘𝚞𝚛𝚌𝚎 𝙲𝚘𝚍𝚎 ${namebot}`},
+	    {title: ` ${pmenus} Speed Bot`, rowId: ".ping",
+	    {title: ` ${pmenus} Runtime`, rowId: ".runtime", 
+	    {title: ` ${pmenus} Owner`, rowId: ".creator",
+	    {title: ` ${pmenus} Discord`, rowId: ".discord",
 	]
     },{
-	title: `${htki} sᴜᴘᴘᴏʀᴛ ${htka}`,
+	title: `${htki} Support ${htka}`,
 	rows: [
-	    {title: `💹 ${pmenus} 𝙳𝙾𝙽𝙰𝚃𝙴`, rowId: ".donasi", description: '𝚂𝚞𝚙𝚙𝚘𝚛𝚝 𝙾𝚠𝚗𝚎𝚛 𝙰𝚐𝚊𝚛 𝙻𝚎𝚋𝚒𝚑 𝚂𝚎𝚖𝚊𝚗𝚐𝚊𝚝'},
+	    {title: ` ${pmenus} Donasi`, rowId: ".donasi",
 	]
 	},{
-	title: `${htki} ᴍᴇɴᴜ ${htka}`,
+	title: `${htki} Menu ${htka}`,
 	rows: [
-	    {title: `💬 ${pmenus} All`, rowId: ".? all", description: "Menampilkan Semua command BOT"},
-	    {title: `🌱 ${pmenus} Rpg`, rowId: ".? rpg", description: "Game Epic Rpg!"},
-	{title: `✨ ${pmenus} Exp`, rowId: ".? xp", description: "Ayo tingkatkan pangkat mu!"},
-	{title: `🎮 ${pmenus} Game`, rowId: ".? game", description: "Gamenya seru seru lho (๑˃̵　ᴗ　˂̵)"},
-	{title: `🧩 ${pmenus} Fun`, rowId: ".? fun", description: "Fitur yang aman untuk keluarga"},
-	{title: `🐚 ${pmenus} Kerang`, rowId: ".? kerangajaib", description: "Tanyakan pada ketua club"},
-	{title: `📑 ${pmenus} Quotes`, rowId: ".? quotes", description: "Random Inspirasi"},
-	{title: `⛩️ ${pmenus} Anime`, rowId: ".? anime", description: "Wibu wibu🐦"},
-	{title: `🔞 ${pmenus} Nsfw`, rowId: ".? nsfw", description: "Tch, dasar sagnean"},
-	{title: `🌟 ${pmenus} Premium`, rowId: ".? premium", description: "Untuk user premium"},
-	{title: `🎭 ${pmenus} Anonymous Chats`, rowId: ".? anonymous", description: "Bicara dengan orang tidak dikenal"},
-	{title: `📖 ${pmenus} Al-Quran`, rowId: ".? quran", description: "Tobat yuk kak"},
-	{title: `🌎 ${pmenus} Internet`, rowId: ".? internet", description: "Cari sesuatu diBOT"},
-	{title: `📩 ${pmenus} Downloaders`, rowId: ".? downloader", description: "Download sesuatu dari BOT"},
-	{title: `🎨 ${pmenus} Stikers`, rowId: ".? stiker", description: "Buat Sticker diBOT"},
-	{title: `✏️ ${pmenus} Nulis`, rowId: ".? nulis", description: "Nulis kok males kak?"},
-	{title: `🎧 ${pmenus} Audio`, rowId: ".? audio", description: "Ubah Audio dengan Filter"},
-	{title: `🏢 ${pmenus} Group`, rowId: ".? group", description: "Only Groups"},
-	{title: `👑 ${pmenus} Admin`, rowId: ".? admin", description: "Only Admin Group"},
-	{title: `🗂️ ${pmenus} Database`, rowId: ".? database", description: "Simpan sesuatu diBOT"},
-	{title: `🛠️ ${pmenus} Tools`, rowId: ".? tools", description: "Mungkin tools ini bisa membantu?"},
-	{title: `ℹ️ ${pmenus} Info`, rowId: ".? info", description: "Info info BOT"},
-	{title: `👩‍💻 ${pmenus} Owner`, rowId: ".? owner", description: "Owner Only!"},
-	{title: `❓ ${pmenus} No Category`, rowId: ".? nocategory", description: "Fitur tanpa kategory!"},
+	    {title: ` ${pmenus} All`, rowId: ".? all",
+	    {title: ` ${pmenus} Rpg`, rowId: ".? rpg",
+	{title: ` ${pmenus} Exp`, rowId: ".? xp",
+	{title: ` ${pmenus} Game`, rowId: ".? game",
+	{title: ` ${pmenus} Fun`, rowId: ".? fun",
+	{title: ` ${pmenus} Kerang`, rowId: ".? kerangajaib",
+	{title: ` ${pmenus} Quotes`, rowId: ".? quotes",
+	{title: ` ${pmenus} Anime`, rowId: ".? anime",
+	{title: ` ${pmenus} Nsfw`, rowId: ".? nsfw",
+	{title: ` ${pmenus} Premium`, rowId: ".? premium", description: "Untuk user premium"},
+	{title: ` ${pmenus} Anonymous Chats`, rowId: ".? anonymous", description: "Bicara dengan orang tidak dikenal"},
+	{title: ` ${pmenus} Al-Quran`, rowId: ".? quran", description: "Tobat yuk kak"},
+	{title: ` ${pmenus} Internet`, rowId: ".? internet", description: "Cari sesuatu diBOT"},
+	{title: ` ${pmenus} Downloaders`, rowId: ".? downloader", description: "Download sesuatu dari BOT"},
+	{title: ` ${pmenus} Stikers`, rowId: ".? stiker", description: "Buat Sticker diBOT"},
+	{title: ` ${pmenus} Nulis`, rowId: ".? nulis", description: "Nulis kok males kak?"},
+	{title: ` ${pmenus} Audio`, rowId: ".? audio", description: "Ubah Audio dengan Filter"},
+	{title: ` ${pmenus} Group`, rowId: ".? group", description: "Only Groups"},
+	{title: ` ${pmenus} Admin`, rowId: ".? admin", description: "Only Admin Group"},
+	{title: ` ${pmenus} Database`, rowId: ".? database", description: "Simpan sesuatu diBOT"},
+	{title: ` ${pmenus} Tools`, rowId: ".? tools", description: "Mungkin tools ini bisa membantu?"},
+	{title: ` ${pmenus} Info`, rowId: ".? info", description: "Info info BOT"},
+	{title: ` ${pmenus} Owner`, rowId: ".? owner", description: "Owner Only!"},
+	{title: ` ${pmenus} No Category`, rowId: ".? nocategory", description: "Fitur tanpa kategory!"},
 	]
   },
 ]
