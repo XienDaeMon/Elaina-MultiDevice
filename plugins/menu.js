@@ -302,28 +302,24 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
 
 let tek = `[ Dashboard ]
 *${ucapan()} ${conn.getName(m.sender)}*
-╭━━━━━━━━━━━━━━━━┈─✧
-┴
-│⬡ Aktif selama ${mpt}
-│⬡ Baterai ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
-│⬡ Prefix : [ ${_p} ]
-│⬡ *${Object.keys(global.db.data.users).length}* Pengguna
-│⬡ *${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}* Chat Terbanned
-│⬡ *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* Pengguna Terbanned
-┬
-├━━━━━━━━━━━━━━━━┈─⋆
-│ ▸ *ᴀᴜᴛʜᴏʀ :* ʙᴏᴄʜɪʟɢᴀᴍɪɴɢ
-┴ ▸ *ᴏᴡɴᴇʀ :* ɪᴍ-ʏᴀɴxɪᴀᴏ
-✧
-┬ 📌 𝗣𝗶𝗻𝗻𝗲𝗱 :
-│ ʙᴇʀɪ ᴊᴇᴅᴀ ʏᴀʜ ᴋᴀᴋ ^ω^
-╰━━━━━━━━━━━━━━━━┈─◂`
+Aktif ${mpt}
+Baterai ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
+Prefix : [ ${_p} ]
+*${Object.keys(global.db.data.users).length}* Pengguna
+*${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}* Chat Terbanned
+*${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* Pengguna Terbanned
+
+Pembuat : DemonGT
+Owner : DemonGT
+
+Kasi Jeda Ya Asu 🗿💦
+`
 const listMessage = {
   text: tek,
   footer: wm2,
   mentions: await conn.parseMention(tek),
   title: ``,
-  buttonText: `Klik Disini ⎙`, 
+  buttonText: `Feature`, 
   sections
 }
   if (teks == '404') {
@@ -656,18 +652,18 @@ function clockStringP(ms) {
 }
 function ucapan() {
   const time = moment.tz('Asia/Jakarta').format('HH')
-  let res = "Kok Belum Tidur Kak? 🥱"
+  let res = "Gatidur Lu? Gw aja ngantuk😬"
   if (time >= 4) {
-    res = "Pagi Lord 🌄"
+    res = "Pagi Sekolah Anj Jangan main Bot 🌄"
   }
   if (time >= 10) {
-    res = "Siang Lord ☀️"
+    res = "Siang Tidur Cokkk Gw Ngantuk ☀️"
   }
   if (time >= 15) {
-    res = "Sore Lord 🌇"
+    res = "Sore2 Traktir Boba Kek Malah Main Bot 🌇"
   }
   if (time >= 18) {
-    res = "Malam Lord 🌙"
+    res = "Malam Nih Tidur Lu Jan Main Bot 🌃"
   }
   return res
 }
